@@ -4,8 +4,9 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const login = req => require.ensure([], () => req(require('@/pages/login')), 'login')
-const leftNav = req => require.ensure([], () => req(require('@/components/leftNav')), 'leftNav')
+const main = req => require.ensure([], () => req(require('@/components/main')), 'main')
 const home = req => require.ensure([], () => req(require('@/pages/home')), 'home')
+const userList = req => require.ensure([], () => req(require('@/pages/userList')), 'userList')
 
 const routes = [
     {
@@ -13,12 +14,16 @@ const routes = [
         component: login
     },
     {
-        path: '/leftNav',
-        component: leftNav
+        path: '/main',
+        component: main
     },
     {
         path: '/home',
         component: home
+    },
+    {
+        path: '/userList',
+        component: userList
     },
 ]
 

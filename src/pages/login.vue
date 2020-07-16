@@ -51,7 +51,7 @@ export default {
             message: "登陆成功!",
             type: "success"
           });
-          this.$router.push("leftNav");
+          this.$router.push("main");
         } else {
           this.$message.error("登陆失败!");
           return false;
