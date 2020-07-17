@@ -10,8 +10,8 @@ const userList = req => require.ensure([], () => req(require('@/pages/userList')
 
 const routes = [
     {
-        path: '/',
-        component: login
+        path: '',
+        redirect: '/login'
     },
     {
         path: '/main',
@@ -29,7 +29,6 @@ const routes = [
 
 const router = new VueRouter({
     routes,
-    strict: process.env.NODE_ENV !== 'production',
 })
 
 export default router
