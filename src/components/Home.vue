@@ -21,7 +21,6 @@
           router
           :default-active="activePath"
         >
-          <div class="toggle-button" @click="toggleCollapse">|||</div>
           <!-- 一级菜单 -->
           <el-submenu :index="item.id + ''" v-for="item in menuList" :key="item.id">
             <!-- 一级菜单模板区域 -->
@@ -43,6 +42,7 @@
               </template>
             </el-menu-item>
           </el-submenu>
+          <div class="toggle-button" @click="toggleCollapse">|||</div>
         </el-menu>
       </el-aside>
       <!-- 页面主题部分 -->
@@ -148,6 +148,7 @@ export default {
   background-color: #545c64;
   .el-menu {
     border-right: none;
+    height: 100%;
   }
 }
 .el-main {
@@ -161,5 +162,8 @@ export default {
   text-align: center;
   letter-spacing: 0.2em;
   cursor: pointer;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 </style>
