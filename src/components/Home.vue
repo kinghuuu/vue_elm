@@ -78,9 +78,9 @@ export default {
           name: "商品管理",
           icon: "el-icon-shopping-bag-2",
           children: [
-            { id: 31, name: "商品列表", path: "" },
-            { id: 32, name: "分类参数", path: "" },
-            { id: 33, name: "商品分类", path: "" }
+            { id: 31, name: "商品列表", path: "goodsList" },
+            { id: 32, name: "分类参数", path: "params" },
+            { id: 33, name: "商品分类", path: "categories" }
           ]
         },
         {
