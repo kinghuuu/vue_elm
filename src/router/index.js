@@ -1,14 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../components/Login'
-import Home from '../components/Home'
-import Welcome from '../components/Welcome'
-import Users from '../components/user/Users'
-import Roles from '../components/power/Roles'
-import Rights from '../components/power/Rights'
-import Cate from '../components/goods/Cate'
-import Params from '../components/goods/Params'
-import GoodsList from '../components/goods/GoodsList'
+const Login = () => (/* webpackChunkName:"login_home_welcome" */ '../components/Login')
+const Home = () => (/* webpackChunkName:"login_home_welcome" */ '../components/Home')
+const Welcome = () => (/* webpackChunkName:"login_home_welcome" */ '../components/Welcome')
+const Users = () => (/* webpackChunkName:"users_roles_rights" */ '../components/Users')
+const Roles = () => (/* webpackChunkName:"users_roles_rights" */ '../components/Roles')
+const Rights = () => (/* webpackChunkName:"users_roles_rights" */ '../components/Rights')
+const Cate = () => (/* webpackChunkName:"cate_params" */ '../components/Cate')
+const Params = () => (/* webpackChunkName:"cate_params" */ '../components/Params')
+const GoodsList = () => (/* webpackChunkName:"goodslist_orders_report" */ '../components/GoodsList')
+const Orders = () => (/* webpackChunkName:"goodslist_orders_report" */ '../components/Orders')
+const Report = () => (/* webpackChunkName:"goodslist_orders_report" */ '../components/Report')
 
 Vue.use(VueRouter)
 
@@ -27,7 +29,9 @@ const router = new VueRouter({
                 { path: '/rights', component: Rights },
                 { path: '/categories', component: Cate },
                 { path: '/params', component: Params },
-                { path: '/goodsList', component: GoodsList }
+                { path: '/goodsList', component: GoodsList },
+                { path: '/orders', component: Orders },
+                { path: '/report', component: Report }
             ]
         }
     ]

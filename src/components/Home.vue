@@ -62,7 +62,7 @@ export default {
           id: 1,
           name: "用户管理",
           icon: "el-icon-user-solid",
-          children: [{ id: 11, name: "用户列表", path: "users" }]
+          children: [{ id: 11, name: "用户列表", path: "users" }],
         },
         {
           id: 2,
@@ -70,8 +70,8 @@ export default {
           icon: "el-icon-s-check",
           children: [
             { id: 21, name: "角色列表", path: "roles" },
-            { id: 22, name: "权限列表", path: "rights" }
-          ]
+            { id: 22, name: "权限列表", path: "rights" },
+          ],
         },
         {
           id: 3,
@@ -80,24 +80,24 @@ export default {
           children: [
             { id: 31, name: "商品列表", path: "goodsList" },
             { id: 32, name: "分类参数", path: "params" },
-            { id: 33, name: "商品分类", path: "categories" }
-          ]
+            { id: 33, name: "商品分类", path: "categories" },
+          ],
         },
         {
           id: 4,
           name: "订单管理",
           icon: "el-icon-notebook-2",
-          children: [{ id: 41, name: "订单管理", path: "" }]
+          children: [{ id: 41, name: "订单管理", path: "orders" }],
         },
         {
           id: 5,
           name: "数据统计",
           icon: "el-icon-pie-chart",
-          children: [{ id: 51, name: "数据统计", path: "" }]
-        }
+          children: [{ id: 51, name: "数据统计", path: "report" }],
+        },
       ],
       isCollapse: false, //是否折叠
-      activePath: "" //被激活的链接地址
+      activePath: "", //被激活的链接地址
     };
   },
   created() {
@@ -115,8 +115,8 @@ export default {
     saveNavState(activePath) {
       window.sessionStorage.setItem("activePath", activePath);
       this.activePath = activePath;
-    }
-  }
+    },
+  },
 };
 </script>
 
